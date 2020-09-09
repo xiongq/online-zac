@@ -8,9 +8,11 @@
 			<key>assets</key>
 			<array>
 				<dict>
+					<key>url</key>
+					<string>https://files.zac.cn/api/files/1f8f07b5-6876-443b-be76-81787ae0eb32</string>
 					<key>kind</key>
 					<string>software-package</string>
-					<key>url</key>
+					<key>url_back</key>
 					<string>https://raw.githubusercontent.com/xiongq/online-zac/master/Release.ipa</string>
 				</dict>
 			</array>
