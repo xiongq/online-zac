@@ -19,11 +19,11 @@
 				<key>bundle-identifier</key>
 				<string>com.zac.zazxAppPushProduction</string>
 				<key>bundle-version</key>
-				<string>2.0.1</string>
+				<string>2.0.2</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>releaseNotes</key>
-				<string>release</string>
+				<string>v2.0.2 Release</string>
 				<key>title</key>
 				<string>中安在线</string>
 			</dict>
