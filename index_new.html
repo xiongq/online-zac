@@ -5,24 +5,20 @@
 </head>
 <body>
     <h1>摄像头示例</h1>
-    <video id="video" width="640" height="480" autoplay playsinline></video>
+    <video id="video" width="640" height="480" autoplay></video>
     <script>
         // 获取视频元素
         const video = document.getElementById('video');
 
-        // 检查浏览器是否支持getUserMedia
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function(stream) {
-                    // 将视频流设置为视频元素的源
-                    video.srcObject = stream;
-                })
-                .catch(function(error) {
-                    console.error("访问摄像头时出错: ", error);
-                });
-        } else {
-            console.error("浏览器不支持getUserMedia");
-        }
+        // 使用getUserMedia API访问摄像头
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                // 将视频流设置为视频元素的源
+                video.srcObject = stream;
+            })
+            .catch(function(error) {
+                console.error("访问摄像头时出错: ", error);
+            });
     </script>
 </body>
 </html>
