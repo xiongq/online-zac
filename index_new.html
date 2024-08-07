@@ -1,17 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>中安在线安装-临时测试</title>
+    <title>访问摄像头</title>
 </head>
 <body>
-	<h1 style="font-size:24pt" align="center">版本号：2.0.47 企业签测试使用<h1/>
-	<p style="color: red;font-size:20pt" align="center">Safari中打开链接 </p>
-	<p style="color: red;font-size:20pt" align="center">使用原生相机扫码 </p>
-	<h1 style="font-size:20pt" align="center">
-		<a title="iPhone" href="itms-services://?action=download-manifest&url=https://files.zac.cn/api/files/49c462f0-8093-4068-8b39-edf212cf52cc">点击安装</a>
-	<h1/>
+    <h1>摄像头示例</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <script>
+        // 获取视频元素
+        const video = document.getElementById('video');
 
-<p align="right">2021-07-12</p>
+        // 使用getUserMedia API访问摄像头
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                // 将视频流设置为视频元素的源
+                video.srcObject = stream;
+            })
+            .catch(function(error) {
+                console.error("访问摄像头时出错: ", error);
+            });
+    </script>
 </body>
 </html>
